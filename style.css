@@ -1,11 +1,11 @@
 body {
-    background : linear-gradient(rgb(236, 211, 173), white)
-  }
+   background: linear-gradient(rgb(236, 203, 152), white)
+ }
     /*header style*/
 header {
     text-align: left; 
     padding: 20px;
-    
+
 
 .mainmenubtn {
     background-color: rgb(29, 162, 214);
@@ -21,10 +21,10 @@ header {
     
     }
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     
 }
+
 .dropdown-child {
     display: none;
     background-color: rgb(218, 125, 20);
@@ -45,19 +45,18 @@ header {
     
 }
 
-
+}
 h1{
-    text-align: center;
+    width: auto;
     color: rgb(248, 249, 250);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
     display : block;
-    width: 30%;
-    margin: auto;
-      
-    
+    margin-left: auto;
+    margin-right: auto;
+          
 }
 
-}
+
