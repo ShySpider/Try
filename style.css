@@ -1,0 +1,63 @@
+body {
+    background : linear-gradient(rgb(236, 211, 173), white)
+  }
+    /*header style*/
+header {
+    text-align: left; 
+    padding: 20px;
+    
+
+.mainmenubtn {
+    background-color: rgb(29, 162, 214);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainmenubtn:hover {
+    background-color: rgb(218, 125, 20);
+    
+    }
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+.dropdown-child {
+    display: none;
+    background-color: rgb(218, 125, 20);
+    min-width: 200px;
+    
+    
+}
+.dropdown-child a {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-decoration: none; 
+    display: block;
+    
+    
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+    
+}
+
+
+h1{
+    text-align: center;
+    color: rgb(248, 249, 250);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    display : block;
+    width: 30%;
+    margin: auto;
+      
+    
+}
+
+}
