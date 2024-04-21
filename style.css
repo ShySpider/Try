@@ -1,5 +1,9 @@
 body {
-   background: linear-gradient(rgb(236, 203, 152), white)
+    background-color: #ffff00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+   
  }
     /*header style*/
 header {
@@ -8,16 +12,18 @@ header {
 
 
 .mainmenubtn {
-    background-color: rgb(29, 162, 214);
+    background-color: rgb(20, 165, 223);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     padding:20px;
     margin-top:20px;
+    border: 2mm ridge rgba(19, 18, 18, 0.6);
+    box-shadow: 5px 5px 5px rgb(105, 63, 63);
 }
 .mainmenubtn:hover {
-    background-color: rgb(218, 125, 20);
+    background-color: rgb(20, 205, 218);
     
     }
 .dropdown {
@@ -27,15 +33,20 @@ header {
 
 .dropdown-child {
     display: none;
-    background-color: rgb(218, 125, 20);
+    background-color: rgb(20, 205, 218);
     min-width: 200px;
+    border-radius: 10px;
+    border: 2mm ridge rgba(19, 18, 18, 0.6);
+    box-shadow: 5px 5px 5px rgb(105, 63, 63);
     
     
 }
 .dropdown-child a {
     color: rgb(0, 0, 0);
     padding: 20px;
-    text-decoration: none; 
+    font-size: 30px;
+    text-shadow: 4px 3px 7px black;
+    text-decoration: none;
     display: block;
     
     
@@ -50,13 +61,68 @@ h1{
     width: auto;
     color: rgb(248, 249, 250);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* animation-duration: 3s; */
+    /* on appelle cette animation slidein par ex */
+    /* animation-name: slidein;  */
+    /* pour qu'elle se répete */
+  /* animation-iteration-count: infinite; */
+  /* pour faire aller et retour */
+  /* animation-direction: alternate; */
+  /* on peut tout ecrire en une ligne */
+  animation: 3s alternate slidein;
 }
 
+/* pour mettre un titre défile droite à gauche par ex*/
+
+h1{ animation-duration: 5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+    /* pour agrandire la police pendant */
+    50% {
+        font-size: 300%;
+        margin-left: 50%;
+        width: 150%;
+      }
+
+}
 img {
+    /* transition en douceur pour chgmt  */
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    /* affichage de base */
     display : block;
     margin-left: auto;
     margin-right: auto;
-          
+    filter: grayscale(100%);    
 }
+/* si on veut un img en niveau de gris
+img{
+     filter: grayscale(100%);
+} */
+
+
+img:hover{
+    
+    border: 5px outset white;
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+    /* agrandir img  */
+    transform:scale(1.05);
+    filter:grayscale(0);
+}
+
 
 
